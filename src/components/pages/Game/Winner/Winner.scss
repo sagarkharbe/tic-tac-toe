@@ -1,0 +1,19 @@
+.winner-text {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+
+  &.X {
+    font-size: 8rem;
+  }
+
+  &.O {
+    font-size: 8rem;
+  }
+
+  &.tie {
+    text-transform: uppercase;
+    font-size: 6rem;
+    color: #567525;
+  }
+}

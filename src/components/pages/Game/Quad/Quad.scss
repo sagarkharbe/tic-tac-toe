@@ -1,0 +1,98 @@
+@import '../../../../assets/scss/variables';
+
+$sizeLine: 10px;
+
+@mixin line-style($posPercent, $orientation) {	
+	position: absolute;
+	@if $orientation == horizontal {
+		height: $sizeLine;
+		width: 100%;
+		top: calc(33.333% * #{$posPercent} - (#{$sizeLine}/2));
+	}
+	@else {
+		height: 100%;
+		width: $sizeLine;
+		left: calc(33.333% * #{$posPercent} - (#{$sizeLine}/2));
+	} 
+	
+}
+
+.quad {
+	max-width: 450px;
+	margin: 0 auto;
+	position: relative;	
+
+	img {
+		width: 100%;
+	}
+
+	.squares {
+		position: absolute;
+	   top: 0;
+	   left: 0;
+	   bottom: 0;
+	   right: 0;
+	   height: 100%;
+	   z-index: 1;
+	   display: flex;
+	   flex-wrap: wrap;
+	   background: #6161612b;
+	   overflow: hidden;
+	   border-radius: 6px;
+	   box-shadow: 0 0 15px #00000057;
+
+	   .square {
+	   	position: relative;
+	   	width: 33.33333%;
+	      height: 33.33333%;
+	      box-sizing: border-box;	      
+	      display: -ms-flexbox;
+	      display: flex;
+	       -ms-flex-pack: center;
+	       justify-content: center;
+	       -ms-flex-align: center;
+	       align-items: center;
+	       cursor: pointer;					    
+	       transition: background-color .2s linear;			
+
+	       &.clicked {
+	       	cursor: default;
+	       }
+
+			// donde va X o O
+			.item {					 
+				font-size: 100px;		
+				display: none;
+				padding-top: 9px;
+				&.X {
+					display: block;						
+				}
+
+				&.O {
+					display: block;
+
+				}
+			}				
+	   }	
+	}
+	.line {
+		border-radius: 5px;
+		background: #00000099	;
+		z-index: 2;
+		box-shadow: 0px 0px 10px #ffffff;
+	}
+	.line1 {
+		@include line-style(1, horizontal);
+	}
+	.line2 {
+		@include line-style(2, horizontal);
+	}
+	.line3 {
+		@include line-style(1, vertical);
+	}
+	.line4 {
+		@include line-style(2, vertical);
+	}
+
+
+}

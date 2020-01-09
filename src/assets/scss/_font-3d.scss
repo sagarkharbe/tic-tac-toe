@@ -1,0 +1,30 @@
+$logo-color: #567525;
+
+#logo {
+  font-family: 'Skranji', cursive;
+  color: $logo-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+  cursor: default;
+}
+#logo:after {
+  content:"Tictactoe";
+  position: absolute;
+  left: 8px;
+  top: 32px;
+}
+#logo:after {
+  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, $logo-color 25%, $logo-color 50%, transparent 50%, transparent 75%, $logo-color 75%);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -5;
+  display: block;
+  text-shadow: none;
+}

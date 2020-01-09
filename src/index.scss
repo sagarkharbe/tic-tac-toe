@@ -1,0 +1,30 @@
+@import "assets/scss/buttons";
+@import "assets/scss/variables";
+@import "animatewithsass/animate.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Skranji);
+
+* {
+  box-sizing: boder-box;
+}
+
+body {
+  background-image: url(http://frebers.com/wp-content/uploads/2016/07/game-background-p4-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  min-height: 600px;
+  margin: 0;
+  padding: 0;
+  font-family: "Skranji", cursive;
+  text-align: center;
+}
+
+.X {
+  color: $x-player-color;
+}
+
+.O {
+  color: $o-player-color;
+}

@@ -1,0 +1,28 @@
+.help-container {
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1.9rem;
+
+	p {
+		text-align: left;
+
+		.o-symbol {
+			color: blue;
+		}
+
+		.x-symbol {
+			color: red;
+		}
+	}
+
+
+	blockquote {
+		font-size: .80rem;		
+		line-height: 1.3rem;
+		padding: 20px 5px;
+		background-color: #EDEDED;
+		color: #929292;
+		border-radius: 5px;
+
+	}
+}
