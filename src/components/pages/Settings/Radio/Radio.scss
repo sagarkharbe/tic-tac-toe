@@ -1,0 +1,53 @@
+
+$background-color: #00171F;
+$footer-color: #003459;
+$details-color: #00A7E1;
+$font-color: #FAFAFA;
+$submit-color: #00CC73;
+$submit-color-darker: #00824A;
+
+
+.form-answer {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 23%;
+	margin: 20px 1% 20px 0;
+	height: 180px;
+	vertical-align: top;
+	font-size: 22px;
+	text-align: center; 
+
+	label {
+		border: 1px solid rgba($font-color,.15);
+		box-sizing: border-box;
+		display: block;
+		height: 100%;
+		width: 100%;
+		padding: 10px 10px 30px 10px;
+		cursor: pointer;
+		opacity: .5;
+		transition: all .5s ease-in-out;
+		&:hover, &:focus, &:active {
+			border: 1px solid rgba($font-color,.5);
+		
+		}
+	}
+}
+
+/* Input style */
+
+input[type="radio"] {
+	opacity: 0;
+	width: 0;
+  height: 0;
+}
+
+input[type="radio"]:active ~ label {
+  	opacity: 1;
+}
+
+input[type="radio"]:checked ~ label {
+  	opacity: 1;
+  	background: red;
+	border: 1px solid $font-color;
+}
